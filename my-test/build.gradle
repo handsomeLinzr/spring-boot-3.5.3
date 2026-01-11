@@ -1,0 +1,18 @@
+plugins {
+    id "java"
+    id "org.springframework.boot.optional-dependencies"
+}
+
+description = "My Spring Boot Test Module"
+
+dependencies {
+    implementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-web"))
+
+    testImplementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-test"))
+}
+
+//// 配置主类，用于直接运行
+//tasks.register('run', JavaExec) {
+//    mainClass = 'com.example.mytest.MyTestApplication'
+//    classpath = sourceSets.main.runtimeClasspath
+//}
